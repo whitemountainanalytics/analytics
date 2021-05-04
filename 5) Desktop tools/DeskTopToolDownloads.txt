@@ -1,0 +1,8 @@
+-- for remote mysql db management 
+https://dev.mysql.com/downloads/workbench/
+
+-- for remote server management
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+-- for remote file transfer
+https://winscp.net/eng/download.php

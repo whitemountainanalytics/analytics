@@ -1,0 +1,74 @@
+-------------------------------------------------------------
+---- DO THIS MANUALLY ---------------------------------------
+-------------------------------------------------------------
+
+-- setup mariadb
+systemctl start mariadb
+mysql_secure_installation -- 
+	the default root password is empty so just click continue
+	create a root password
+	remove anonymous users
+	allow remote root login
+	remove test database
+	reset privilege tables
+
+systemctl enable mariadb
+
+-- connect to db
+mysql -u root -p
+
+-- create a database 
+CREATE DATABASE webappdatabase;
+
+-- connect to the database
+use webappdatabase;
+
+-----------------------------------------------------------
+--- COPY AND PASTE EVERYTHING BELOW INTO THE CONSOLE WINDOW
+-----------------------------------------------------------
+
+-- CREATE PAGE LOGGING TABLES
+-- MYSQL DOES NOT HAVE SEQUENCES LIKE ORACLE
+drop table if exists page_viewed;
+create table if not exists page_viewed
+(
+id int  NOT NULL AUTO_INCREMENT,
+page_id int,
+page_view_date datetime,
+PRIMARY KEY (id)
+);
+
+drop table if exists pages;
+create table pages
+(
+page_id int NOT NULL,
+page_name varchar(40),
+create_date datetime,
+PRIMARY KEY (page_id)
+);
+
+insert into pages (page_id, page_name, create_date) values (1, 'Home Page', now());
+insert into pages (page_id, page_name, create_date) values (2, 'Info Page', now());
+insert into pages (page_id, page_name, create_date) values (3, 'Another Page', now());
+
+-- create a web user and grant privelages
+CREATE USER 'web_user'@'localhost' IDENTIFIED BY 'web_user';
+CREATE USER 'web_user'@'%' IDENTIFIED BY 'web_user';
+GRANT delete, insert, update, select ON webappdatabase.* TO 'web_user'@'localhost';
+GRANT delete, insert, update, select ON webappdatabase.* TO 'web_user'@'%';
+
+-- create an analytics user and grant privelages
+CREATE USER 'analytics_user'@'localhost' IDENTIFIED BY 'analytics_user';
+CREATE USER 'analytics_user'@'%' IDENTIFIED BY 'analytics_user';
+
+GRANT select ON webappdatabase.pages TO 'analytics_user'@'localhost';
+GRANT select ON webappdatabase.page_viewed TO 'analytics_user'@'localhost';
+GRANT select ON webappdatabase.pages TO 'analytics_user'@'%';
+GRANT select ON webappdatabase.page_viewed TO 'analytics_user'@'%';
+
+select user();
+SHOW GRANTS FOR 'analytics_user'@'localhost';
+show grants for 'web_user'@'localhost';
+show grants for 'web_user'@'\@';
+select host, user from mysql.user;
+
