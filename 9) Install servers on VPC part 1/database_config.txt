@@ -1,0 +1,117 @@
+-- create a database 
+CREATE DATABASE webappdatabase;
+
+-- connect to the database
+use webappdatabase;
+
+
+-- CREATE PAGE LOGGING TABLES
+-- MYSQL DOES NOT HAVE SEQUENCES LIKE ORACLE
+drop table if exists page_viewed;
+create table if not exists page_viewed
+(
+id int  NOT NULL AUTO_INCREMENT,
+page_id int,
+page_view_date datetime,
+PRIMARY KEY (id)
+);
+
+drop table if exists pages;
+create table pages
+(
+page_id int NOT NULL,
+page_name varchar(40),
+create_date datetime,
+PRIMARY KEY (page_id)
+);
+
+insert into pages (page_id, page_name, create_date) values (1, 'Home Page', now());
+insert into pages (page_id, page_name, create_date) values (2, 'Info Page', now());
+insert into pages (page_id, page_name, create_date) values (3, 'Another Page', now());
+
+-- transactional tables
+drop table if exists registration;
+create table if not exists registration
+(
+id int NOT NULL AUTO_INCREMENT,
+fname varchar(100),
+lname varchar(100),
+email varchar(100),
+phone varchar(30),
+addr_line1 varchar(40),
+city varchar(40),
+state varchar(20),
+zip varchar(10),
+class_name varchar(20),
+create_date datetime,
+active int DEFAULT 1,
+PRIMARY KEY (id)
+);
+
+insert into registration
+(fname, lname, email, phone, addr_line1, city, state, zip, class_name, create_date, active) values
+('first', 'last', 'someone@somemail.com', '123-456-7899', '1 main street', 'mycity', 'ca', '94501', 'best class', now(), 1);
+
+CREATE OR REPLACE VIEW registr_nonpi_view AS SELECT id, fname, zip, class_name, create_date, active FROM registration;
+
+drop table if exists registration_t;
+create table if not exists registration_t
+(
+id int,
+fname varchar(100),
+zip varchar(10),
+class_name varchar(20),
+create_date datetime,
+active int
+);
+
+insert into registration_t(id, fname, zip, class_name, create_date, active) 
+select id, fname, zip, class_name, create_date, active from registr_nonpi_view a
+where a.create_date between '2021-02-01'  and now();
+
+-- create a web user and grant privelages
+CREATE USER 'web_user'@'localhost' IDENTIFIED BY 'web_user';
+CREATE USER 'web_user'@'%' IDENTIFIED BY 'web_user';
+GRANT delete, insert, update, select ON webappdatabase.* TO 'web_user'@'localhost';
+GRANT delete, insert, update, select ON webappdatabase.* TO 'web_user'@'%';
+
+-- create an analytics user and grant privelages
+CREATE USER 'analytics_user'@'localhost' IDENTIFIED BY 'analytics_user';
+CREATE USER 'analytics_user'@'%' IDENTIFIED BY 'analytics_user';
+
+GRANT select ON webappdatabase.pages TO 'analytics_user'@'localhost';
+GRANT select ON webappdatabase.page_viewed TO 'analytics_user'@'localhost';
+GRANT select ON webappdatabase.registr_nonpi_view TO 'analytics_user'@'localhost';
+GRANT select ON webappdatabase.registration_t TO 'analytics_user'@'localhost';
+
+GRANT select ON webappdatabase.pages TO 'analytics_user'@'%';
+GRANT select ON webappdatabase.page_viewed TO 'analytics_user'@'%';
+GRANT select ON webappdatabase.registr_nonpi_view TO 'analytics_user'@'%';
+GRANT select ON webappdatabase.registration_t TO 'analytics_user'@'%';
+
+-- ask the DBA to allow you to create indexes
+grant index on webappdatabase.* to 'analytics_user'@'%';
+grant index on webappdatabase.* to 'analytics_user'@'localhost';
+
+-- crap will not work
+create index registration_idx1 on registration(create_date);
+
+select user();
+SHOW GRANTS FOR 'analytics_user'@'localhost';
+show grants for 'web_user'@'localhost';
+show grants for 'web_user'@'\@';
+select host, user from mysql.user;
+
+-- this is not showing priviliges... 
+// select host, user, password, Select_priv, Insert_priv, Update_priv, Delete_priv from mysql.user
+
+-- CREATE BUTTON CLICK TRACKER TABLE --
+
+drop table if exists button_clicked;
+create table if not exists button_clicked
+(
+id int NOT NULL AUTO_INCREMENT,
+button_name varchar(40),
+click_time datetime,
+PRIMARY KEY (id)
+);
