@@ -1,0 +1,9 @@
+# mofify your LogFormat entries in /etc/httpd/conf/httpd.conf as below
+<IfModule log_config_module>
+    #
+    # The following directives define some format nicknames for use with
+    # a CustomLog directive (see below).
+    #
+    # LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" \"%{x_sessionid}o\" \"%{x_cookieid}o\"  " combined
+    LogFormat "%h %l %u %t \"%r\" %>s %b  \"%{x_sessionid}o\"  \"%{x_cookieid}o\" " common
