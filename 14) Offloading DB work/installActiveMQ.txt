@@ -1,0 +1,55 @@
+-- install java first
+yum install java-1.8.0-openjdk
+
+-- verify java version
+java -version
+alternatives --config java
+
+-- install apache activemq
+cd /opt
+wget https://downloads.apache.org/activemq/5.15.15/apache-activemq-5.15.15-bin.tar.gz 
+
+tar zxvf apache-activemq-5.15.15-bin.tar.gz
+cd apache-activemq-5.15.15
+
+-- create a new use for activemq
+useradd activemq
+
+chown -R activemq:activemq /opt/apache-activemq-5.15.15
+ls -l /opt/apache-activemq-5.15.15/
+
+nano /etc/systemd/system/activemq.service
+-- add below
+[Unit]
+Description=Apache ActiveMQ Message Broker
+After=network-online.target
+
+[Service]
+Type=forking
+
+User=activemq
+Group=activemq
+
+WorkingDirectory=/opt/apache-activemq-5.15.15/bin
+ExecStart=/opt/apache-activemq-5.15.15/bin/activemq start
+ExecStop=/opt/apache-activemq-5.15.15/bin/activemq stop
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+
+-- reaload the daemon service to read the new service
+systemctl daemon-reload
+
+-- start activemq
+systemctl start activemq.service
+
+-check activemq status
+systemctl status activemq.service
+
+--enable for restart
+systemctl enable activemq.service
+
+-- verify console
+IPADDRESS:8161 admin/admin
+
