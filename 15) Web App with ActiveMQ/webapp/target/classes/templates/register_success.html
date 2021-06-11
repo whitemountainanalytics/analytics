@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration Success</title>
+    <style type="text/css">
+        span {
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div align="left">
+    <h2>Your Class Registration Information</h2>
+    <Label>First name:</Label><a th:text="${registrant.fname}"/><br/>
+    <Label>Last name:</Label><a th:text="${registrant.lname}"></a><br/>
+    <Label>Email:</Label><a th:text="${registrant.email}"></a><br/>
+    <Label>Addrss:</Label><a th:text="${registrant.addr_line1}"></a><br/>
+    <Label>City:</Label><a th:text="${registrant.city}"></a><br/>
+    <Label>State:</Label><a th:text="${registrant.state}"></a><br/>
+    <Label>Zip:</Label><a th:text="${registrant.zip}"></a><br/>
+    <Label>Class:</Label><a th:text="${registrant.class_name}"></a><br/>
+</div>
+</body>

@@ -1,0 +1,6 @@
+-- install java first
+yum install java-1.8.0-openjdk -y
+
+-- verify java version
+java -version
+alternatives --config java
