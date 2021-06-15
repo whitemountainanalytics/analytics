@@ -12,11 +12,13 @@ public class Dao {
     private static JdbcTemplate jdbcTemplate;
 
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+
         this.jdbcTemplate = jdbcTemplate;
     }
 
     @Autowired
     public Dao() {
+
         this.jdbcTemplate = jdbcTemplate;
     }
 
@@ -33,12 +35,4 @@ public class Dao {
         jdbcTemplate.execute(query);
     }
 
-    public void savePageView(AnalyticsPage analyticsPage, String date) {
-
-        String query = "Insert into page_viewed" +
-                "(page_id, page_view_date) values ('"
-                + analyticsPage.getPageID() + "','"  + date + "')";
-
-        jdbcTemplate.execute(query);
-    }
 }

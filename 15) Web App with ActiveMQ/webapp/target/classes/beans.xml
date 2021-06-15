@@ -32,4 +32,8 @@
         <property name="MQEndpoint" value="${mqendpoint}" />
     </bean>
 
+    <bean id="loadProperties" class="com.properties.LoadProperties" >
+        <property name="appProperties" value="${appproperties}" />
+    </bean>
+
 </beans>

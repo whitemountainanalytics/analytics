@@ -1,14 +1,11 @@
 package com.messagecontrol;
 
-import com.domain.AnalyticsRegistration;
-import com.domain.Registrant;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 import java.io.Serializable;
-import java.util.Date;
+
 
 @Component
 public class ActiveMQhandler {
@@ -18,13 +15,14 @@ public class ActiveMQhandler {
     private Connection conn;
 
     public void setMQEndpoint(String MQEndpoint) {
+
         this.MQEndpoint = MQEndpoint;
     }
 
-    @Autowired
-    public ActiveMQhandler() {
-        this.MQEndpoint = MQEndpoint;
-    }
+//    @Autowired
+//    public ActiveMQhandler() {
+//        this.MQEndpoint = MQEndpoint;
+//    }
 
     private void startSession(){
         try {

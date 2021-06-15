@@ -6,6 +6,7 @@ import com.domain.AnalyticsPage;
 import com.domain.AnalyticsRegistration;
 import com.domain.Registrant;
 import com.messagecontrol.ActiveMQhandler;
+import com.properties.LoadProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,10 +20,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class PageViews {
@@ -34,6 +34,9 @@ public class PageViews {
     private static final Logger LOGGER = LoggerFactory.getLogger(PageViews.class);
     Cookie[] cookies;
     Cookie cookie = null;
+    private static String throwMQException = "false";
+    private static String throwDBException = "false";
+    private static Properties properties = null;
 
     // used to create and test error conditions
     int a = 1;
@@ -43,6 +46,10 @@ public class PageViews {
     @GetMapping("/")
     public String index(Model model, HttpSession session, HttpServletRequest request,
                         HttpServletResponse response) {
+
+        if (properties == null) {
+            readProperties();
+        }
 
         // manage session and cookies
         sessionID = session.getId();
@@ -61,8 +68,14 @@ public class PageViews {
         try {
             AnalyticsPage analyticsPage = new AnalyticsPage(sessionID, cookie.getValue(), date, "4", "greeting");
 
-            // uncomment the statement below to create an exception
-            // a=c/b;
+            // this is for test purposes and will force a divide by zero exception
+            // set throwmqexception=true in the application.properties file to enable this condition
+            // it is used to simulate a case where MQ is not reachable in which case the program
+            // should continue and the error should be logged into the application log
+            // however the user should be able to continue using the web application as normal
+            if (throwMQException.equals("true")){
+                a=c/b;
+            }
             activeMQhandler = new ActiveMQhandler();
             activeMQhandler.sendMessage(analyticsPage, "pageview");
         } catch (Exception e ){
@@ -76,6 +89,10 @@ public class PageViews {
     @GetMapping("/register")
     public String showForm(Model model, HttpSession session, HttpServletRequest request,
     HttpServletResponse response) {
+
+        if (properties == null) {
+            readProperties();
+        }
 
         // manage session and cookies
         sessionID = session.getId();
@@ -100,8 +117,16 @@ public class PageViews {
 
         // send pageview data to the message bus
         try {
-            // uncomment the statement below to create an exception
-            // a=c/b;
+
+            // this is for test purposes and will force a divide by zero exception
+            // set throwmqexception=true in the application.properties file to enable this condition
+            // it is used to simulate a case where MQ is not reachable in which case the program
+            // should continue and the error should be logged into the application log
+            // however the user should be able to continue using the web application as normal
+            if (throwMQException.equals("true")){
+                a=c/b;
+            }
+
             AnalyticsPage analyticsPage = new AnalyticsPage(sessionID, cookie.getValue(), date, "5", "register");
 
             activeMQhandler = new ActiveMQhandler();
@@ -115,6 +140,10 @@ public class PageViews {
     @PostMapping("/register")
     public String submitForm(@ModelAttribute("registrant") Registrant registrant, HttpSession session,
                              HttpServletRequest request, HttpServletResponse response) {
+
+        if (properties == null) {
+            readProperties();
+        }
 
         // manage session and cookies
         sessionID = session.getId();
@@ -134,11 +163,35 @@ public class PageViews {
         try {
             AnalyticsPage analyticsPage = new AnalyticsPage(sessionID, cookie.getValue(), date, "6", "register_success");
 
+            // this will force an example of how and MQException would be handled
+            // it will do a divide by zero
+            if (throwMQException.equals("true")){
+                a=c/b;
+            }
+
             activeMQhandler = new ActiveMQhandler();
             activeMQhandler.sendMessage(analyticsPage, "pageview");
 
-            // uncomment the statement below to create an exception
-            // a=c/b;
+        } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
+                + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
+
+        // send non pi registrant data to the message bus
+        try {
+            AnalyticsRegistration analyticsRegistration
+                    = new AnalyticsRegistration(sessionID, cookie.getValue(),
+                    registrant.getRegistration_date(), registrant.getFname(), registrant.getZip(), registrant.getClass_name());
+
+            // this is for test purposes and will force a divide by zero exception
+            // set throwmqexception=true in the application.properties file to enable this condition
+            // it is used to simulate a case where MQ is not reachable in which case the program
+            // should continue and the error should be logged into the application log
+            // however the user should be able to continue using the web application as normal
+            if (throwMQException.equals("true")){
+                a=c/b;
+            }
+
+            activeMQhandler = new ActiveMQhandler();
+            activeMQhandler.sendMessage(analyticsRegistration, "registrant");
         } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
                 + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
 
@@ -146,22 +199,19 @@ public class PageViews {
         try {
             Dao dao = new Dao();
             registrant.setRegistration_date(date.toString());
+
+            // this is for test purposes and will force a divide by zero exception
+            // set throwdatabaseexception=true in the application.properties file to enable this condition
+            // it is used to simulate a case where a DB exception is thrown in which case
+            // the error should be logged into the application log
+            // also the user will be shown an error page
+            if (throwDBException.equals("true")){
+                a=c/b;
+            }
             dao.saveRegistration(registrant, date);
 
-            // uncomment the statement below to create an exception
-           // a=c/b;
         } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
                 + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage()); return "error";}
-
-        // send non pi registrant data to the message bus
-        try {
-            AnalyticsRegistration analyticsRegistration
-                    = new AnalyticsRegistration(sessionID, cookie.getValue(),
-                    registrant.getRegistration_date(), registrant.getFname(), registrant.getZip(), registrant.getClass_name());
-            activeMQhandler = new ActiveMQhandler();
-            activeMQhandler.sendMessage(analyticsRegistration, "registrant");
-        } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
-                + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
 
         // LOGGER.info(remoteIP + " - " + "SessionID: " + sessionID + " - Cookie:" + cookie + " - Page: register_success" + " - " + userAgent);
         return "register_success";
@@ -174,6 +224,25 @@ public class PageViews {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(datepattern);
         String date = simpleDateFormat.format(new Date());
         return date;
+    }
+
+    private void readProperties (){
+        try {
+            properties = LoadProperties.loadProperties();
+            @SuppressWarnings("unchecked")
+            Enumeration<String> enums = (Enumeration<String>) properties.propertyNames();
+            while (enums.hasMoreElements()) {
+                String key = enums.nextElement();
+                String value = properties.getProperty(key);
+                if(key.equals("throwdatabaseexception")){
+                    this.throwDBException = value;
+                }
+                if(key.equals("throwmqexception")){
+                    this.throwMQException = value;
+                }
+            }
+        } catch(IOException e){{LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
+                + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}}
     }
 
 }
