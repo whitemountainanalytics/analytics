@@ -15,19 +15,6 @@ public class LoadProperties {
         this.appProperties = appProperties;
     }
 
-    /*
-    public static Properties loadProperties(String resourceFileName) throws IOException {
-        Properties props = new Properties();
-        InputStream inStream = LoadProperties.class
-                .getClassLoader()
-                .getResourceAsStream(resourceFileName);
-
-        props.load(inStream);
-        inStream.close();
-        return props;
-    }
-    */
-
     public static Properties loadProperties() throws IOException {
         Properties props = new Properties();
         InputStream inStream = LoadProperties.class

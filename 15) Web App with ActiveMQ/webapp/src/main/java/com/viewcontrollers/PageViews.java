@@ -38,6 +38,9 @@ public class PageViews {
     private static String throwDBException = "false";
     private static Properties properties = null;
 
+    public void setThrowMQException(String throwDBException){this.throwMQException = throwDBException;}
+    public void setThrowDBException(String throwDBException) {this.throwDBException = throwDBException;}
+
     // used to create and test error conditions
     int a = 1;
     int b = 0;
@@ -46,10 +49,6 @@ public class PageViews {
     @GetMapping("/")
     public String index(Model model, HttpSession session, HttpServletRequest request,
                         HttpServletResponse response) {
-
-        if (properties == null) {
-            readProperties();
-        }
 
         // manage session and cookies
         sessionID = session.getId();
@@ -73,6 +72,7 @@ public class PageViews {
             // it is used to simulate a case where MQ is not reachable in which case the program
             // should continue and the error should be logged into the application log
             // however the user should be able to continue using the web application as normal
+            LOGGER.info("throwMQException = " + throwMQException);
             if (throwMQException.equals("true")){
                 a=c/b;
             }
@@ -80,7 +80,7 @@ public class PageViews {
             activeMQhandler.sendMessage(analyticsPage, "pageview");
         } catch (Exception e ){
             LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
-                    + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());
+                    + " - Cookie:" + cookie.getValue() + " - Page: register" + " - " + userAgent + " - " + e.getMessage());
         }
 
         return "greeting";
@@ -89,10 +89,6 @@ public class PageViews {
     @GetMapping("/register")
     public String showForm(Model model, HttpSession session, HttpServletRequest request,
     HttpServletResponse response) {
-
-        if (properties == null) {
-            readProperties();
-        }
 
         // manage session and cookies
         sessionID = session.getId();
@@ -123,6 +119,7 @@ public class PageViews {
             // it is used to simulate a case where MQ is not reachable in which case the program
             // should continue and the error should be logged into the application log
             // however the user should be able to continue using the web application as normal
+            LOGGER.info("throwMQException = " + throwMQException);
             if (throwMQException.equals("true")){
                 a=c/b;
             }
@@ -132,7 +129,7 @@ public class PageViews {
             activeMQhandler = new ActiveMQhandler();
             activeMQhandler.sendMessage(analyticsPage, "pageview");
         } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
-                + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
+                + " - Cookie:" + cookie.getValue() + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
 
         return "register";
     }
@@ -140,10 +137,6 @@ public class PageViews {
     @PostMapping("/register")
     public String submitForm(@ModelAttribute("registrant") Registrant registrant, HttpSession session,
                              HttpServletRequest request, HttpServletResponse response) {
-
-        if (properties == null) {
-            readProperties();
-        }
 
         // manage session and cookies
         sessionID = session.getId();
@@ -186,6 +179,7 @@ public class PageViews {
             // it is used to simulate a case where MQ is not reachable in which case the program
             // should continue and the error should be logged into the application log
             // however the user should be able to continue using the web application as normal
+            LOGGER.info("throwMQException = " + throwMQException);
             if (throwMQException.equals("true")){
                 a=c/b;
             }
@@ -193,7 +187,7 @@ public class PageViews {
             activeMQhandler = new ActiveMQhandler();
             activeMQhandler.sendMessage(analyticsRegistration, "registrant");
         } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
-                + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
+                + " - Cookie:" + cookie.getValue() + " - Page: register" + " - " + userAgent + " - " + e.getMessage());}
 
         // log the registration to the databse including PI data
         try {
@@ -205,13 +199,14 @@ public class PageViews {
             // it is used to simulate a case where a DB exception is thrown in which case
             // the error should be logged into the application log
             // also the user will be shown an error page
+            LOGGER.info("throwDBException = " + throwDBException);
             if (throwDBException.equals("true")){
                 a=c/b;
             }
             dao.saveRegistration(registrant, date);
 
         } catch (Exception e ){LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
-                + " - Cookie:" + cookie + " - Page: register" + " - " + userAgent + " - " + e.getMessage()); return "error";}
+                + " - Cookie:" + cookie.getValue() + " - Page: register" + " - " + userAgent + " - " + e.getMessage()); return "error";}
 
         // LOGGER.info(remoteIP + " - " + "SessionID: " + sessionID + " - Cookie:" + cookie + " - Page: register_success" + " - " + userAgent);
         return "register_success";
@@ -234,11 +229,14 @@ public class PageViews {
             while (enums.hasMoreElements()) {
                 String key = enums.nextElement();
                 String value = properties.getProperty(key);
+                // LOGGER.info(key + " = " + value);
                 if(key.equals("throwdatabaseexception")){
                     this.throwDBException = value;
+                    LOGGER.info("throwdb" + value);
                 }
                 if(key.equals("throwmqexception")){
                     this.throwMQException = value;
+                    LOGGER.info("throwmq" + value);
                 }
             }
         } catch(IOException e){{LOGGER.error(remoteIP + " - " + "SessionID: " + sessionID
