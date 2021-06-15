@@ -19,11 +19,6 @@ public class ActiveMQhandler {
         this.MQEndpoint = MQEndpoint;
     }
 
-//    @Autowired
-//    public ActiveMQhandler() {
-//        this.MQEndpoint = MQEndpoint;
-//    }
-
     private void startSession(){
         try {
             String url = MQEndpoint;
@@ -47,8 +42,7 @@ public class ActiveMQhandler {
         conn.close();
         }
         catch (JMSException e) {
-            System.out.println("Caught: " + e);
-            e.printStackTrace();
+           e.printStackTrace();
         }
     }
 
@@ -72,7 +66,6 @@ public class ActiveMQhandler {
             closeSession();
         }
         catch (JMSException e) {
-            System.out.println("Caught: " + e);
             e.printStackTrace();
         }
     }
