@@ -1,8 +1,10 @@
 com\domain\AnalyticsPage.class
 com\viewcontrollers\PageViews.class
 com\database\Dao.class
+com\props\ApplicationProperties.class
 com\cookie\CookieHandler.class
 com\properties\LoadProperties.class
+com\domain\PageRef.class
 com\messagecontrol\ActiveMQhandler.class
 com\domain\AnalyticsRegistration.class
 com\startup\MainClass.class

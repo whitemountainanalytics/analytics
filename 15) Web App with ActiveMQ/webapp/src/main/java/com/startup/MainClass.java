@@ -31,7 +31,6 @@ public class MainClass  {
         LOGGER.info("ThrowMQException is set to: " + args[0] + ", ThrowDBException is set to: " + args[1]);
         app.run(args);
 
-        // SpringApplication.run(MainClass.class, args);
     }
 
 }
