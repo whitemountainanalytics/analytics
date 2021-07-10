@@ -7,7 +7,7 @@ public class CookieHandler {
 
     public Cookie setCookie(Cookie[] p_cookies){
 
-        Cookie retCookie = null;
+        Cookie retCookie;
         String cookieName = "var_cookie";
         String cookieValue = null;
         String cookieExists = "no";

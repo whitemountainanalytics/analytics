@@ -1,8 +1,8 @@
 package com.database;
 
-import com.domain.AnalyticsPage;
 import com.domain.Registrant;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -11,18 +11,11 @@ public class Dao {
 
     private static JdbcTemplate jdbcTemplate;
 
+    private static final Logger logger = LoggerFactory.getLogger(Dao.class);
+
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-
-        this.jdbcTemplate = jdbcTemplate;
+        Dao.jdbcTemplate = jdbcTemplate;
     }
-
-    @Autowired
-    public Dao() {
-
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
-    public void init() {}
 
     public void saveRegistration(Registrant registrant, String date) {
 
@@ -33,6 +26,7 @@ public class Dao {
                 + "','" +  registrant.getClass_name() + "','" + date + "','1')";
 
         jdbcTemplate.execute(query);
+        logger.info("Inserted record into registration table.");
     }
 
 }

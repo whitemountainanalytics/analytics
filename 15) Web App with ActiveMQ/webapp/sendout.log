@@ -1,83 +1,701 @@
-13:19:56.488 [main] INFO  com.startup.MainClass - Starting MainClass using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 6020 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\classes started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
-13:19:56.504 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
-13:19:58.134 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:19:58.165 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
-13:19:58.634 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
-13:19:59.228 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
-13:19:59.243 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-13:19:59.243 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
-13:19:59.384 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-13:19:59.399 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2676 ms
-13:20:00.274 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
-13:20:00.399 [main] INFO  com.startup.MainClass - Started MainClass in 5.118 seconds (JVM running for 8.611)
-13:20:00.399 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-13:20:00.399 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-13:20:21.891 [http-nio-80-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-13:20:21.891 [http-nio-80-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-13:20:21.891 [http-nio-80-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-13:20:21.960 [http-nio-80-exec-2] ERROR com.viewcontrollers.PageViews - 127.0.0.1 - SessionID: 2D91908E9D54AFC87746FA6ED96099C0 - Cookie:javax.servlet.http.Cookie@1616aa31 - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0 - / by zero
-13:20:25.967 [http-nio-80-exec-4] ERROR com.viewcontrollers.PageViews - 127.0.0.1 - SessionID: 2D91908E9D54AFC87746FA6ED96099C0 - Cookie:javax.servlet.http.Cookie@75c0a6a6 - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0 - / by zero
-13:20:35.142 [http-nio-80-exec-3] ERROR com.viewcontrollers.PageViews - 127.0.0.1 - SessionID: 2D91908E9D54AFC87746FA6ED96099C0 - Cookie:javax.servlet.http.Cookie@377d441a - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0 - / by zero
-13:20:35.142 [http-nio-80-exec-3] ERROR com.viewcontrollers.PageViews - 127.0.0.1 - SessionID: 2D91908E9D54AFC87746FA6ED96099C0 - Cookie:javax.servlet.http.Cookie@377d441a - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0 - / by zero
-13:20:36.245 [http-nio-80-exec-3] ERROR com.viewcontrollers.PageViews - 127.0.0.1 - SessionID: 2D91908E9D54AFC87746FA6ED96099C0 - Cookie:javax.servlet.http.Cookie@377d441a - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0 - Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+13:49:19.254 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 14264 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+13:49:19.254 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+13:49:22.640 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+13:49:22.671 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:49:22.671 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:49:22.809 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:49:22.809 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3417 ms
+13:49:24.114 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+13:49:24.185 [main] INFO  com.startup.MainClass - Started MainClass in 5.758 seconds (JVM running for 7.641)
+13:49:24.193 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+13:49:24.195 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+13:49:37.144 [http-nio-8088-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:49:37.144 [http-nio-8088-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:49:37.146 [http-nio-8088-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:25:09.640 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 11064 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:25:09.640 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:25:14.597 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+14:25:14.634 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:25:14.634 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:25:14.819 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:25:14.819 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4991 ms
+14:25:16.737 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+14:25:16.766 [main] INFO  com.startup.MainClass - Started MainClass in 8.87 seconds (JVM running for 23.388)
+14:25:16.771 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:25:16.778 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:25:23.157 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:25:23.158 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:25:23.160 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:26:42.884 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 3988 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:26:42.887 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:26:48.140 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+14:26:48.177 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:26:48.177 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:26:48.393 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:26:48.393 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5319 ms
+14:26:50.485 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+14:26:50.518 [main] INFO  com.startup.MainClass - Started MainClass in 9.347 seconds (JVM running for 28.11)
+14:26:50.526 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:26:50.534 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:26:50.764 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:26:50.765 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:26:50.767 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+14:30:01.388 [SpringContextShutdownHook] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+14:34:35.509 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 17604 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:34:35.517 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:34:41.246 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+14:34:41.287 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:34:41.287 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:34:41.519 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:34:41.519 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5729 ms
+14:34:43.565 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+14:34:43.581 [main] INFO  com.startup.MainClass - Started MainClass in 10.084 seconds (JVM running for 62.028)
+14:34:43.596 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:34:43.596 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:35:06.144 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:35:06.146 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:35:06.147 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:41:15.906 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 12760 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:41:15.921 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:41:17.982 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:41:18.020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+14:41:18.592 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+14:41:19.678 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+14:41:19.709 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:41:19.709 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:41:19.831 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:41:19.847 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3779 ms
+14:41:21.325 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+14:41:21.346 [main] INFO  com.startup.MainClass - Started MainClass in 6.461 seconds (JVM running for 7.565)
+14:41:21.354 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:41:21.356 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:41:25.509 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:41:25.510 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:41:25.512 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:42:56.517 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 16820 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:42:56.548 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:42:58.742 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:42:58.780 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+14:42:59.418 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+14:43:00.578 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+14:43:00.593 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:43:00.593 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:43:00.725 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:43:00.725 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3991 ms
+14:43:02.273 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+14:43:02.306 [main] INFO  com.startup.MainClass - Started MainClass in 6.755 seconds (JVM running for 7.745)
+14:43:02.309 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:43:02.314 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:43:09.547 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:43:09.548 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:43:09.554 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+14:49:35.377 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 1708 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:49:35.393 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:49:38.807 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:49:38.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 JPA repository interfaces.
+14:49:39.960 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+14:49:42.036 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+14:49:42.085 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:49:42.085 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:49:42.295 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:49:42.296 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6671 ms
+14:49:44.710 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+14:49:44.762 [main] INFO  com.startup.MainClass - Started MainClass in 11.299 seconds (JVM running for 19.736)
+14:49:44.775 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:49:44.783 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:49:45.061 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:49:45.067 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:49:45.079 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+14:52:18.433 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 20116 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:52:18.449 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:52:20.748 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:52:20.796 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+14:52:21.451 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+14:52:22.614 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+14:52:22.646 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:52:22.646 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:52:22.761 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:52:22.761 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4143 ms
+14:52:24.335 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+14:52:24.355 [main] INFO  com.startup.MainClass - Started MainClass in 6.915 seconds (JVM running for 7.934)
+14:52:24.355 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:52:24.363 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:52:31.367 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:52:31.368 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:52:31.369 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:52:31.481 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+14:53:43.447 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 9936 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+14:53:43.447 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+14:53:45.613 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:53:45.664 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+14:53:46.262 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+14:53:47.401 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+14:53:47.429 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:53:47.429 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:53:47.552 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:53:47.552 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3967 ms
+14:53:49.058 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+14:53:49.086 [main] INFO  com.startup.MainClass - Started MainClass in 6.641 seconds (JVM running for 7.714)
+14:53:49.086 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+14:53:49.086 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+14:53:58.509 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:53:58.510 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:53:58.512 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:00:14.356 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 7520 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:00:14.356 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:00:17.703 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:00:17.723 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:00:17.731 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:00:17.874 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:00:17.874 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3364 ms
+15:00:18.947 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:00:18.975 [main] INFO  com.startup.MainClass - Started MainClass in 5.577 seconds (JVM running for 6.665)
+15:00:18.977 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+15:00:18.977 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:00:28.938 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:00:28.938 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:00:28.939 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:00:29.006 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:00:29.017 [http-nio-8088-exec-1] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:00:53.232 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:00:53.232 [http-nio-8088-exec-2] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:01:28.607 [http-nio-8088-exec-3] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:javax.servlet.http.Cookie@277c7d70 - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:01:28.608 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:01:28.609 [http-nio-8088-exec-3] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:01:28.609 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+15:01:28.609 [http-nio-8088-exec-3] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:02:28.347 [http-nio-8088-exec-5] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:02:28.348 [http-nio-8088-exec-5] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:02:34.789 [http-nio-8088-exec-6] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:02:34.789 [http-nio-8088-exec-6] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: AE5DD2DFEABFFBA44DB9289A650D1CDC - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:02:44.798 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 12644 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:02:44.808 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:02:49.914 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:02:49.962 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:02:49.962 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:02:50.196 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:02:50.196 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5147 ms
+15:02:51.874 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:02:51.904 [main] INFO  com.startup.MainClass - Started MainClass in 9.049 seconds (JVM running for 11.286)
+15:02:51.914 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+15:02:51.914 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:02:56.075 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:02:56.076 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:02:56.077 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:03:04.118 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:03:06.745 [http-nio-8088-exec-1] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: 89F2E467E1D46E015EF617D95669ADE1 - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:03:18.052 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:03:21.899 [http-nio-8088-exec-2] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: 89F2E467E1D46E015EF617D95669ADE1 - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:03:56.654 [http-nio-8088-exec-3] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: 89F2E467E1D46E015EF617D95669ADE1 - Cookie:javax.servlet.http.Cookie@7dfeefe6 - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:03:56.662 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:04:00.138 [http-nio-8088-exec-3] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: 89F2E467E1D46E015EF617D95669ADE1 - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:05:14.191 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+15:06:10.729 [http-nio-8088-exec-3] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: 89F2E467E1D46E015EF617D95669ADE1 - Cookie:PPEesjrrxxWGGqfxPYbOonfEM - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 - null
+15:10:53.108 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 11676 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:10:53.116 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:10:56.980 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:10:57.061 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+15:10:58.098 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+15:10:59.576 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:10:59.603 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:10:59.603 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:10:59.785 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:10:59.785 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6402 ms
+15:11:02.957 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:11:02.990 [main] INFO  com.startup.MainClass - Started MainClass in 11.752 seconds (JVM running for 13.883)
+15:11:02.998 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+15:11:03.006 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:11:05.332 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:11:05.333 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:11:05.336 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+15:11:11.141 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:11:22.884 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:11:35.053 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:11:42.443 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+15:16:43.498 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 8504 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:16:43.503 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:16:45.895 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:16:45.946 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+15:16:46.620 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+15:16:47.775 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:16:47.793 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:16:47.795 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:16:47.933 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:16:47.934 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4266 ms
+15:16:49.574 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:16:49.605 [main] INFO  com.startup.MainClass - Started MainClass in 7.143 seconds (JVM running for 8.491)
+15:16:49.605 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+15:16:49.605 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:16:51.179 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:16:51.180 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:16:51.184 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+15:16:51.305 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:16:53.969 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:16:57.222 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:16:57.470 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+15:17:00.588 [http-nio-8088-exec-4] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:17:03.005 [http-nio-8088-exec-5] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:17:09.549 [http-nio-8088-exec-6] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:17:09.793 [http-nio-8088-exec-6] INFO  com.viewcontrollers.PageViews - throwDBException = false
+15:34:55.109 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 16988 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:34:55.109 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:35:00.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:35:00.300 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 0 JPA repository interfaces.
+15:35:01.403 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+15:35:04.485 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:35:04.548 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:35:04.549 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:35:04.855 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:35:04.855 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9546 ms
+15:35:07.698 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'gpv' method 
+com.viewcontrollers.PageViews#homepage(Model, HttpSession, HttpServletRequest, HttpServletResponse)
+to {GET [/]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#homepage(Model, HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+15:35:07.703 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:35:07.719 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-13:22:51.270 [main] INFO  com.startup.MainClass - Starting MainClass using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 2284 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\classes started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
-13:22:51.270 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
-13:22:52.615 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:22:52.647 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
-13:22:52.990 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
-13:22:53.412 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
-13:22:53.428 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-13:22:53.428 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
-13:22:53.553 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-13:22:53.553 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2158 ms
-13:25:33.685 [main] INFO  com.startup.MainClass - Starting MainClass using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 4608 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\classes started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
-13:25:33.695 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
-13:25:35.644 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:25:35.667 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
-13:25:36.068 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
-13:25:38.085 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
-13:25:38.108 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-13:25:38.108 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
-13:25:38.444 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-13:25:38.445 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4599 ms
-13:26:01.155 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
-13:26:01.171 [main] INFO  com.startup.MainClass - Started MainClass in 28.719 seconds (JVM running for 30.497)
-13:26:01.178 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-13:26:01.178 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-13:26:05.539 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-13:26:05.539 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-13:26:05.542 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-16:48:27.361 [main] INFO  com.startup.MainClass - Starting MainClass using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 7140 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\classes started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
-16:48:27.369 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
-16:48:29.020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-16:48:29.055 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
-16:48:29.491 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
-16:48:30.105 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
-16:48:30.120 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-16:48:30.120 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
-16:48:30.269 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-16:48:30.269 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2698 ms
-16:48:41.641 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
-16:48:41.760 [main] INFO  com.startup.MainClass - Started MainClass in 15.949 seconds (JVM running for 19.088)
-16:48:41.762 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-16:48:41.767 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-16:48:48.696 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-16:48:48.696 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-16:48:48.700 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-16:49:04.016 [http-nio-80-exec-1] ERROR com.viewcontrollers.PageViews - 0:0:0:0:0:0:0:1 - SessionID: 9E47FFA6C21274E2BF5878435DD1A155 - Cookie:javax.servlet.http.Cookie@7238d73b - Page: register - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36 - / by zero
-17:21:31.873 [main] INFO  com.startup.MainClass - Starting MainClass using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 9764 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\classes started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
-17:21:31.884 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
-17:21:33.083 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-17:21:33.099 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
-17:21:33.415 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
-17:21:33.738 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
-17:21:33.754 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-17:21:33.754 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
-17:21:33.870 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-17:21:33.870 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1896 ms
-17:21:34.402 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
-17:21:34.418 [main] INFO  com.startup.MainClass - Started MainClass in 3.551 seconds (JVM running for 4.925)
-17:21:34.418 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-17:21:34.418 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+15:35:07.841 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'gpv' method 
+com.viewcontrollers.PageViews#homepage(Model, HttpSession, HttpServletRequest, HttpServletResponse)
+to {GET [/]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#homepage(Model, HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at com.startup.MainClass.main(MainClass.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'gpv' method 
+com.viewcontrollers.PageViews#homepage(Model, HttpSession, HttpServletRequest, HttpServletResponse)
+to {GET [/]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#homepage(Model, HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 22 common frames omitted
+15:37:30.325 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 13464 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:37:30.328 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:37:33.086 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:37:33.143 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+15:37:33.796 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+15:37:35.480 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:37:35.520 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:37:35.520 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:37:35.669 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:37:35.669 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5193 ms
+15:37:37.199 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:37:37.219 [main] INFO  com.startup.MainClass - Started MainClass in 8.095 seconds (JVM running for 9.97)
+15:37:37.219 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+15:37:37.219 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:37:47.467 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:37:47.467 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:37:47.469 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:37:47.545 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:37:50.223 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:37:53.597 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:37:53.847 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+15:47:46.383 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 10416 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+15:47:46.383 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+15:47:49.928 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:47:50.009 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+15:47:50.739 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+15:47:52.898 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:47:52.946 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:47:52.948 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+15:47:53.193 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:47:53.193 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6632 ms
+15:47:56.074 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:47:56.111 [main] INFO  com.startup.MainClass - Started MainClass in 11.129 seconds (JVM running for 37.186)
+15:47:56.137 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+15:47:56.156 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:47:56.386 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:47:56.387 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:47:56.389 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:48:15.580 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:48:15.580 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:48:31.365 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:48:43.188 [http-nio-8088-exec-4] INFO  com.viewcontrollers.PageViews - throwMQException = false
+15:48:47.121 [http-nio-8088-exec-4] INFO  com.viewcontrollers.PageViews - throwDBException = false
+16:04:58.605 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 11092 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+16:04:58.605 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+16:05:00.979 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:05:01.029 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+16:05:01.701 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+16:05:02.895 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+16:05:02.926 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:05:02.928 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:05:03.069 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:05:03.077 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4325 ms
+16:05:04.597 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+16:05:04.620 [main] INFO  com.startup.MainClass - Started MainClass in 7.011 seconds (JVM running for 8.021)
+16:05:04.620 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+16:05:04.630 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+16:05:15.494 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:05:15.495 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:05:15.497 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:05:15.578 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:05:26.221 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:05:29.433 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:05:29.666 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+16:06:54.337 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 3116 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+16:06:54.339 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+16:06:56.793 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:06:56.825 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+16:06:57.565 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+16:06:59.054 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+16:06:59.084 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:06:59.084 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:06:59.243 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:06:59.243 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4738 ms
+16:06:59.517 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mySQLDao' defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]: Invocation of init method failed; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find an init method named 'init' on bean with name 'mySQLDao'
+16:06:59.527 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:06:59.555 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16:06:59.628 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mySQLDao' defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]: Invocation of init method failed; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find an init method named 'init' on bean with name 'mySQLDao'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at com.startup.MainClass.main(MainClass.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find an init method named 'init' on bean with name 'mySQLDao'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1877)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1854)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 22 common frames omitted
+16:07:54.339 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 17168 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+16:07:54.339 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+16:07:56.579 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:07:56.708 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+16:07:57.328 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+16:07:58.526 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+16:07:58.548 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:07:58.548 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:07:58.689 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:07:58.689 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4219 ms
+16:08:00.228 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+16:08:00.248 [main] INFO  com.startup.MainClass - Started MainClass in 6.941 seconds (JVM running for 7.942)
+16:08:00.258 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+16:08:00.258 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+16:08:05.781 [http-nio-8088-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:08:05.781 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:08:05.783 [http-nio-8088-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:08:05.851 [http-nio-8088-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:08:08.707 [http-nio-8088-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:08:12.296 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:08:12.528 [http-nio-8088-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+16:16:23.367 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 19084 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+16:16:23.370 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+16:16:27.643 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:16:27.723 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+16:16:28.735 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+16:16:30.446 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+16:16:30.481 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:16:30.481 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:16:30.660 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:16:30.660 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6974 ms
+16:16:33.210 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'gpv' method 
+com.viewcontrollers.PageViews#homepage(HttpSession, HttpServletRequest, HttpServletResponse)
+to {GET [/]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#homepage(HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+16:16:33.223 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:16:33.256 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16:16:33.477 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'gpv' method 
+com.viewcontrollers.PageViews#homepage(HttpSession, HttpServletRequest, HttpServletResponse)
+to {GET [/]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#homepage(HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at com.startup.MainClass.main(MainClass.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'gpv' method 
+com.viewcontrollers.PageViews#homepage(HttpSession, HttpServletRequest, HttpServletResponse)
+to {GET [/]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#homepage(HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 22 common frames omitted
+16:27:02.691 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 17732 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+16:27:02.694 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+16:27:05.263 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:27:05.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+16:27:05.760 [main] WARN  o.s.b.c.p.PropertySourcesDeducer - Multiple PropertySourcesPlaceholderConfigurer beans registered [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0, generalProperties], falling back to Environment
+16:27:07.077 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+16:27:07.110 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:27:07.111 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:27:07.315 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:27:07.315 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4427 ms
+16:27:08.992 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+16:27:09.012 [main] INFO  com.startup.MainClass - Started MainClass in 7.233 seconds (JVM running for 9.085)
+16:27:09.012 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+16:27:09.020 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+16:27:28.657 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:27:28.657 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:27:28.659 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:27:28.754 [http-nio-80-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:27:31.404 [http-nio-80-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:27:34.526 [http-nio-80-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:27:34.773 [http-nio-80-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+16:31:34.298 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 16788 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+16:31:34.298 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+16:31:36.561 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:31:36.589 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+16:31:38.195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+16:31:38.226 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:31:38.226 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:31:38.364 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:31:38.364 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3945 ms
+16:31:39.884 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+16:31:39.904 [main] INFO  com.startup.MainClass - Started MainClass in 6.514 seconds (JVM running for 8.455)
+16:31:39.904 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+16:31:39.914 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+16:31:43.958 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:31:43.959 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:31:43.961 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:31:44.047 [http-nio-80-exec-1] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:31:47.572 [http-nio-80-exec-2] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:31:50.836 [http-nio-80-exec-3] INFO  com.viewcontrollers.PageViews - throwMQException = false
+16:31:51.090 [http-nio-80-exec-3] INFO  com.viewcontrollers.PageViews - throwDBException = false
+18:05:41.981 [main] INFO  com.startup.MainClass - Starting MainClass v1.0-SNAPSHOT using Java 1.8.0_151 on DESKTOP-F5TJQK0 with PID 18952 (C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp\target\webapp-1.0-SNAPSHOT.jar started by abcde in C:\Users\abcde\Desktop\AnalyticsEndToEnd\docs for tutorial\15) Web App with ActiveMQ\webapp)
+18:05:41.981 [main] INFO  com.startup.MainClass - No active profile set, falling back to default profiles: default
+18:05:45.513 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18:05:45.582 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+18:05:50.292 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+18:05:50.373 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:05:50.374 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+18:05:50.698 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:05:50.699 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8548 ms
+18:05:53.227 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+18:05:53.270 [main] INFO  com.startup.MainClass - Started MainClass in 12.906 seconds (JVM running for 41.652)
+18:05:53.277 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+18:05:53.279 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+18:05:57.415 [http-nio-80-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:05:57.416 [http-nio-80-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:05:57.419 [http-nio-80-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18:05:57.524 [http-nio-80-exec-10] INFO  com.viewcontrollers.PageViews - throwMQException = false
+18:06:01.953 [http-nio-80-exec-8] INFO  com.viewcontrollers.PageViews - throwMQException = false
+18:08:23.544 [http-nio-80-exec-7] INFO  com.viewcontrollers.PageViews - throwMQException = false
+18:08:23.793 [http-nio-80-exec-7] INFO  com.viewcontrollers.PageViews - throwDBException = false
+18:17:51.797 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:17:51.801 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18:28:51.816 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:28:51.822 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18:45:40.337 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:45:40.339 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18:48:30.014 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:48:30.020 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+19:42:21.074 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:42:21.078 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+19:47:04.795 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:47:04.798 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+19:49:47.185 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:49:47.188 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+19:51:28.996 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:51:29.000 [http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+19:54:23.143 [http-nio-8080-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:54:23.148 [http-nio-8080-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+19:57:21.656 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:57:21.661 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+19:58:48.467 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:58:48.471 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:01:12.618 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:01:12.621 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:02:17.331 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:02:17.334 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:03:44.589 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:03:44.593 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+20:04:36.774 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:04:36.778 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:06:58.806 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:06:58.809 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:08:05.107 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:08:05.111 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:10:00.647 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:10:00.652 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:12:29.588 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:12:29.593 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:13:43.097 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:13:43.102 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:16:14.386 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:16:14.396 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+20:20:26.906 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:20:26.910 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:22:36.461 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:22:36.464 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:26:11.513 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:26:11.516 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:38:31.399 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:38:31.399 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+20:42:04.011 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to register bean definition with name 'pageViews'
+Offending resource: URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]; nested exception is org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'pageViews' defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]: Cannot register bean definition [Generic bean: class [com.viewcontrollers.PageViews]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]] for bean 'pageViews': There is already [Generic bean: class [com.viewcontrollers.PageViews]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/com/viewcontrollers/PageViews.class]] bound.
+20:42:04.108 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'pageViews', defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml], could not be registered. A bean with that name has already been defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/com/viewcontrollers/PageViews.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+20:44:38.171 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to register bean definition with name 'pageViews'
+Offending resource: URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]; nested exception is org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'pageViews' defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]: Cannot register bean definition [Generic bean: class [com.viewcontrollers.PageViews]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml]] for bean 'pageViews': There is already [Generic bean: class [com.viewcontrollers.PageViews]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/com/viewcontrollers/PageViews.class]] bound.
+20:44:38.240 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'pageViews', defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/beans.xml], could not be registered. A bean with that name has already been defined in URL [jar:file:/C:/Users/abcde/Desktop/AnalyticsEndToEnd/docs%20for%20tutorial/15)%20Web%20App%20with%20ActiveMQ/webapp/target/webapp-1.0-SNAPSHOT.jar!/BOOT-INF/classes!/com/viewcontrollers/PageViews.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+20:47:01.425 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'pageView' method 
+com.viewcontrollers.PageViews#submitRegistrationForm(Registrant, HttpSession, HttpServletRequest, HttpServletResponse)
+to {POST [/register]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#submitRegistrationForm(Registrant, HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+20:47:01.510 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'pageView' method 
+com.viewcontrollers.PageViews#submitRegistrationForm(Registrant, HttpSession, HttpServletRequest, HttpServletResponse)
+to {POST [/register]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#submitRegistrationForm(Registrant, HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at com.startup.MainClass.main(MainClass.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'pageView' method 
+com.viewcontrollers.PageViews#submitRegistrationForm(Registrant, HttpSession, HttpServletRequest, HttpServletResponse)
+to {POST [/register]}: There is already 'pageViews' bean method
+com.viewcontrollers.PageViews#submitRegistrationForm(Registrant, HttpSession, HttpServletRequest, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 22 common frames omitted
+20:50:24.881 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:50:24.881 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+20:52:03.569 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:52:03.569 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+20:53:34.039 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:53:34.049 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:57:30.898 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:57:30.904 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms

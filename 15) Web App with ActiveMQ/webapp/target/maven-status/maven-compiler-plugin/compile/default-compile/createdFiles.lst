@@ -3,6 +3,7 @@ com\viewcontrollers\PageViews.class
 com\database\Dao.class
 com\props\ApplicationProperties.class
 com\cookie\CookieHandler.class
+com\config\GeneralConfig.class
 com\properties\LoadProperties.class
 com\domain\PageRef.class
 com\messagecontrol\ActiveMQhandler.class

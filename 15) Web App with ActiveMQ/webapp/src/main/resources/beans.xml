@@ -7,10 +7,10 @@
 
     <context:property-placeholder location="classpath:application.properties" />
 
-    <bean id="generalProperties"
-          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer ">
-        <property name="location" value="classpath:application.properties" />
-    </bean>
+<!--    <bean id="generalProperties"-->
+<!--          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer ">-->
+<!--        <property name="location" value="classpath:application.properties" />-->
+<!--    </bean>-->
 
     <bean id="mySqlDS" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${dbdriverclass}" />
@@ -24,7 +24,7 @@
         <property name="dataSource" ref="mySqlDS"></property>
     </bean>
 
-    <bean id="mySQLDao" init-method="init" class="com.database.Dao" >
+    <bean id="mySQLDao" class="com.database.Dao" >
         <property name="jdbcTemplate" ref="jdbcTemplateOracle"></property>
     </bean>
 

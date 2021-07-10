@@ -1,11 +1,9 @@
 package com.messagecontrol;
 
-import org.springframework.stereotype.Component;
 import org.apache.activemq.ActiveMQConnectionFactory;
-
 import javax.jms.*;
 import java.io.Serializable;
-
+import org.springframework.stereotype.Component;
 
 @Component
 public class ActiveMQhandler {

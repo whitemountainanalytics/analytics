@@ -6,24 +6,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import org.springframework.stereotype.Component;
-import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Component
 public class ApplicationProperties {
 
-    public  ApplicationProperties(){};
+    public  ApplicationProperties(){}
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationProperties.class);
-
-    private  Map<String, String> pMap = new HashMap<String, String>();
-    public  Map<String, String> refMap = new HashMap<String, String>();
-
-    @PostConstruct
-    public void init(){
-    }
+    private final Map<String, String> pMap = new HashMap<>();
 
     public Map getProps() {
 
